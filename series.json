@@ -1,0 +1,24 @@
+[
+    {
+        "name": "series 1",
+        "image": "https://i.pinimg.com/736x/99/a4/ef/99a4efa511269b33c000c5c03c6de121.jpg",
+        "description": "lorem ipsum description for this blindbox series #1",
+        "options": [
+            {
+                "name": "person 1",
+                "image": "https://i.pinimg.com/736x/45/4a/cb/454acbd502b00a22c7b6536fc4acbb37.jpg",
+                "description": "something cool about person 1"
+            },
+            {
+                "name": "person 2",
+                "image": "https://i.pinimg.com/736x/7c/52/92/7c5292f1902b7f7982fd4e8f63cbd8c2.jpg",
+                "description": "something cool about person 2"
+            },
+            {
+                "name": "person 3",
+                "image": "https://i.pinimg.com/736x/2a/b2/8c/2ab28c4c14cc5dc82f998a5c52c75059.jpg",
+                "description": "something cool about person 3"
+            }
+        ]
+    }
+]
