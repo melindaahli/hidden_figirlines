@@ -1,7 +1,11 @@
+import RightButton from '../components/RightButton.jsx'
+import LeftButton from '../components/LeftButton.jsx'
+
 function Store() {
     return (
         <div>
-            This is the Store page, where all the series will be displayed.
+            <RightButton />
+            <LeftButton />
         </div>
     );
 }
