@@ -1,16 +1,22 @@
-import WideButton from '../components/WideButton.jsx'
+import WideButton from '../components/WideButton.jsx';
+import overlayImage from '../../logooo.png';
 
 function Home(props) {
     return (
-        <div>
-            This is the Home page.
-            {/* to do: 
-            1. what goes on top of the buttons?
-            2. add spacing between the buttons (try div wrapping them and searching 'tailwindcss vertical flex')
-            */}
-            <div className="flex flex-col space-y-4 mt-4">
-                <WideButton text={"PLAY"} clickFunction={() => props.setCurrentPage('game')} />
-                <WideButton text={"STORE"} clickFunction={() => props.setCurrentPage('store')} />
+        <div className="flex flex-col items-center py-8">
+            <div className="bg-[#FAF8F0] px-8 py-6 rounded-xl flex flex-col items-center">
+                <img 
+                    src={overlayImage} 
+                    alt="Logo" 
+                    className="w-64 md:w-80 lg:w-96 object-contain" 
+                />
+                <p className="mt-4 text-xl md:text-2xl lg:text-3xl font-medium text-[#FCC8BA] gaegu-regular">
+                    hidden figirlines
+                </p>
+            </div>
+            <div className="flex flex-col space-y-4 w-full max-w-xs mt-10">
+                <WideButton text="PLAY" clickFunction={() => props.setCurrentPage('game')} />
+                <WideButton text="STORE" clickFunction={() => props.setCurrentPage('store')} />
             </div>
         </div>
     );
