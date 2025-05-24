@@ -8,7 +8,9 @@ function Store(props) {
             <h2 className="lexend-deca-bold text-4xl" style={{ position: 'relative', top: '-20px' }}>Blindboxes</h2>
             </div>
             <Carousel />
-            <WideButton text={"SELECT"} clickFunction={() => props.setCurrentPage('series')}/>
+            <div style={{ display: "flex", justifyContent: "center"}}>
+                <WideButton text={"SELECT"} clickFunction={() => props.setCurrentPage('series')}/>
+            </div>
         </div>
     );
 }
