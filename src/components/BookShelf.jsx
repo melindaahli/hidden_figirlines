@@ -1,13 +1,11 @@
-import ShelfRow from '../components/ShelfRow'
+import ShelfRow from './ShelfRow';
 
-export default function BookShelf(props) {
+export default function BookShelf({ data }) {
     return (
-        <div>
-            This is the bookshelf.
-            It will contain ShelfRows.
-            Pass in the series data into the shelf rows.
-            Try mapping.
-            https://coursework.vschool.io/mapping-components-in-react/
+        <div className="bg-[#794F41] p-4 space-y-6">
+            {data.map((series, index) => (
+                <ShelfRow key={index} series={series} />
+            ))}
         </div>
     );
 }
