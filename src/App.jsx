@@ -6,6 +6,7 @@ import Game from './pages/Game'
 import Store from './pages/Store'
 import Shelf from './pages/Shelf'
 import Series from './pages/Series'
+import Info from './pages/Info'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -25,6 +26,8 @@ function App() {
         return <Shelf />;
       case 'series':
         return <Series setCurrentPage={setCurrentPage} chosenSeriesIndex={chosenSeriesIndex} />;
+      case 'info':
+        return <Info setCurrentPage={setCurrentPage}/>;
       default:
         return <Home />;
     }
