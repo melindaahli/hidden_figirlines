@@ -5,7 +5,9 @@ function Store(props) {
     return (
         <div>
             <Carousel />
-            <WideButton text={"SELECT"} clickFunction={() => props.setCurrentPage('series')}/>
+            <div style={{ display: "flex", justifyContent: "center"}}>
+                <WideButton text={"SELECT"} clickFunction={() => props.setCurrentPage('series')}/>
+            </div>
         </div>
     );
 }
