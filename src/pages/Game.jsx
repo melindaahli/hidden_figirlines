@@ -1,7 +1,9 @@
+import GameSlots from '../components/GameSlots.jsx'
+
 function Game() {
     return (
         <div>
-            This is the Game page.
+            <GameSlots />
         </div>
     );
 }

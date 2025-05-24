@@ -1,6 +1,7 @@
 import BookShelf from '../components/BookShelf';
 import data from '../../seriesData.json';
 
+
 function Shelf({ collectedFigures }) {
   return (
     <div className="bg-[#FAF8F0] min-h-screen p-6" style={{ marginTop: '150px' }}>
