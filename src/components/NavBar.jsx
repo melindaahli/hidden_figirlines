@@ -42,7 +42,7 @@ function NavBar(props) {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn gaegu-regular">coins {props.currency}</a>
+                    <a className="btn gaegu-regular rounded-4xl bg-white">coins {props.currency}</a>
                 </div>
             </div>
         </div>

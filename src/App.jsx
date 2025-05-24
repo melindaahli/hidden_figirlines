@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Game from './pages/Game'
 import Store from './pages/Store'
 import Shelf from './pages/Shelf'
-
+import Series from './pages/Series'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -14,13 +14,15 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <Home />;
+        return <Home setCurrentPage={setCurrentPage} />;
       case 'game':
         return <Game />;
       case 'store':
-        return <Store />;
+        return <Store setCurrentPage={setCurrentPage} />;
       case 'shelf':
         return <Shelf />;
+      case 'series':
+        return <Series />;
       default:
         return <Home />;
     }
@@ -29,7 +31,9 @@ function App() {
   return (
     <>
       <NavBar setCurrentPage={setCurrentPage} currency={currency}/>
-      {renderPage()}
+      <div className="flex flex-row h-svh justify-center items-center">
+        {renderPage()}
+      </div>
     </>
   )
 }
