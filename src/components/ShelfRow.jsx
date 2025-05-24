@@ -6,10 +6,15 @@ export default function ShelfRow({ series }) {
             <h2 className="gaegu-regular text-white mb-4 text-lg font-semibold">{series.name}</h2>
             <div className="flex space-x-4 overflow-x-auto">
                 {series.options.map((option, idx) => (
-                    <Figure key={idx} image={option.image} name={option.name} />
+                    <Figure
+                        key={idx}
+                        image={option.image}
+                        name={option.name}
+                        description={option.description}
+                        real_image={option.real_image}
+                    />
                 ))}
             </div>
         </div>
     );
 }
-
