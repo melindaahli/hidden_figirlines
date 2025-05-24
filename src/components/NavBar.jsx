@@ -1,7 +1,7 @@
 function NavBar(props) {
 
     return (
-        <div>
+        <div className="sticky top-0">
             <div className="navbar bg-base-200 shadow-sm">
                 <div className="navbar-start">
                     <div className="dropdown">
