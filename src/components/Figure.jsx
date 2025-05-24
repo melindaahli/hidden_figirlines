@@ -1,12 +1,78 @@
-export default function Figure(props) {
-    return (
-        <div>
-            This is a figure.
-            It will have an image and 
-            a small text of its name below.
-            Its data is passed in via props.
-            Grayscale (?) image if we know it's not found yet. 
-            maybe do: (props.show) ? (props.image) : (props.silhouette / silohuette that's imported so we don't need to pass in?)
+import { useState } from 'react';
+
+export default function Figure({ image, name, description, real_image }) {
+  const [selected, setSelected] = useState(false);
+  const [flipped, setFlipped] = useState(false);
+
+  const closePopup = () => {
+    setSelected(false);
+    setFlipped(false);
+  };
+
+  return (
+    <>
+      <div
+        className="w-24 flex-shrink-0 text-center text-white cursor-pointer"
+        onClick={() => setSelected(true)}
+      >
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-32 object-cover rounded"
+        />
+        <p className="mt-2 text-sm gaegu-regular">{name}</p>
+      </div>
+
+      {selected && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-transparent"
+          onClick={closePopup} // clicking backdrop closes
+        >
+          {/* Popup Content (Click inside shouldn't close) */}
+          <div
+            className="relative flex bg-transparent rounded-xl items-center justify-center gap-4"
+            onClick={(e) => e.stopPropagation()} // prevent bubble-up
+          >
+            {/* Left: Static Figure Image */}
+            <div className="w-[280px] flex items-center justify-center">
+              <img
+                src={image}
+                alt={name}
+                className="h-[280px] rounded-xl shadow-md"
+              />
+            </div>
+
+            {/* Right: Flip Card */}
+            <div
+              className="w-[220px] flex items-center justify-center perspective cursor-pointer"
+              onClick={() => setFlipped(!flipped)}
+            >
+              <div
+                className={`relative w-[220px] h-[280px] transition-transform duration-500 transform-style-preserve-3d ${
+                  flipped ? 'rotate-y-180' : ''
+                }`}
+              >
+                {/* Front: Description */}
+                <div className="absolute w-full h-full backface-hidden bg-[#794F41] rounded-lg p-4 shadow-md flex flex-col justify-center items-center text-center">
+                  <h3 className="text-lg font-bold mb-2 gaegu-regular text-[#FCC8BA]">
+                    {name}
+                  </h3>
+                  <p className="text-sm text-[#F2F0E5]">{description}</p>
+                </div>
+
+                {/* Back: Real Image */}
+                <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-lg flex items-center justify-center shadow-md overflow-hidden">
+                  <img
+                    src={real_image}
+                    alt={`${name} real`}
+                    className="h-full w-full object-contain rounded"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    );
+      )}
+    </>
+  );
 }
