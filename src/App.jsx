@@ -11,6 +11,7 @@ import Shelf from './pages/Shelf'
 function App() {
   const [count, setCount] = useState(0)
   const [currentPage, setCurrentPage] = useState('home');
+  const [currency, setCurrency] = useState(0);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -29,21 +30,8 @@ function App() {
 
   return (
     <>
-      <NavBar setCurrentPage={setCurrentPage} />
+      <NavBar setCurrentPage={setCurrentPage} currency={currency}/>
       {renderPage()}
-      {/* this is comment, */}
-      <div>
-        {/* keeping this for now so that we can see how to easily add images to page. */}
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Home</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
     </>
   )
 }
