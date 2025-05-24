@@ -7,17 +7,20 @@
             {
                 "name": "person 1",
                 "image": "https://i.pinimg.com/736x/45/4a/cb/454acbd502b00a22c7b6536fc4acbb37.jpg",
-                "description": "something cool about person 1"
+                "description": "something cool about person 1",
+                "real_image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSeuQ-jdWAW3ex3dgAVZjmghTp51bdkeT21iw3nRtdqbhpm7YrwynWhJ02Oc8lVR46w6daSMz6urf85VKUlyxvgV9n6wVqDk4WpGG8s0XDn"
             },
             {
                 "name": "person 2",
                 "image": "https://i.pinimg.com/736x/7c/52/92/7c5292f1902b7f7982fd4e8f63cbd8c2.jpg",
-                "description": "something cool about person 2"
+                "description": "something cool about person 2",
+                "real_image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTQN-zuGiNmqdh6EegIKUkWsY_Gy3s7f0xgcZavg3uE-usacRilb3OsbtnMG1FZvZGB6zZxf5gmzXOpnkbvxnEVT8PSSCDaIvBq13XbF4ipwgV85hTR8so9rg"
             },
             {
                 "name": "person 3",
                 "image": "https://i.pinimg.com/736x/2a/b2/8c/2ab28c4c14cc5dc82f998a5c52c75059.jpg",
-                "description": "something cool about person 3"
+                "description": "something cool about person 3",
+                "real_image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRLz6D4Z2Un-MDDY9Ni9cxk0FH-7h_8GaNhUoX2jZG3U8fIqtPR-i5IOb6F_w0_yYlTcJiCV4ZRWoYFlXYlMzMcMxjhvm5ykXO_rwzcwqldEODv141kwYifUA"
             }
         ]
     }
