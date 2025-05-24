@@ -1,27 +1,27 @@
 import WideButton from '../components/WideButton'
+import FigureList from '../components/FigureList'
+import seriesData from '../../series.json'
 
-export default function Series() {
+export default function Series(props) {
+    let seriesIndex = props.chosenSeriesIndex;
+    const specificSeries = seriesData[seriesIndex];
 
     return (
-    <div className="items-center">
-        This is the Series page. 
-        The outermost div (above) should be a flex container or grid or smth like that.
-        Some container to make it so that the image and right section are side by side.
-        <div>
-            This div is where the big box image should be.
-        </div>
-        <div className="">
-            This div is where the right section should be.
-            should be some type of container to make every thing vertically aligned (?)
-            <div>back to boxes button.</div>
-            <div>series name</div>
-            <div>series description</div>
-            <div>
-                component that is a row of figurines (maybe try reusing ShelfRow?)
-                new component is probably fine too.
+        <div className="flex items-center">
+            <div className="p-8">
+                <img
+                    src={specificSeries['image']}
+                    alt="Series Box"
+                    className="w-96 h-auto"
+                />
             </div>
-            <WideButton text={"OPEN BOX"} clickFunction={"function-that-will-open-boxes"} />
+            <div className="flex flex-col gap-[4vh]">
+                <btn className="lexend-deca-regular text-base" onClick={() => props.setCurrentPage('store')}>&lt; back to boxes</btn>
+                <h1 className="lexend-deca-bold text-6xl">{specificSeries['name']}</h1>
+                <p className="gaegu-regular text-2xl">{specificSeries['description']}</p>
+                <FigureList specificSeries={specificSeries} />
+                <WideButton text={"OPEN BOX"} clickFunction={"function-that-will-open-boxes"} />
+            </div>
         </div>
-    </div>
     );
 }
