@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Figure({ image, name, description, real_image }) {
+export default function Figure({ image, name, description, real_image, collected }) {
   const [selected, setSelected] = useState(false);
   const [flipped, setFlipped] = useState(false);
 
@@ -9,16 +9,26 @@ export default function Figure({ image, name, description, real_image }) {
     setFlipped(false);
   };
 
+  const handleClick = () => {
+    if (collected) {
+      setSelected(true);
+    }
+  };
+
   return (
     <>
       <div
-        className="w-24 flex-shrink-0 text-center text-white cursor-pointer"
-        onClick={() => setSelected(true)}
+        className={`w-24 flex-shrink-0 text-center text-white ${
+          collected ? 'cursor-pointer' : 'cursor-not-allowed'
+        }`}
+        onClick={handleClick}
       >
         <img
           src={image}
           alt={name}
-          className="w-full h-32 object-cover rounded"
+          className={`w-full h-32 object-cover rounded transition duration-300 ${
+            collected ? '' : 'blur-sm brightness-50'
+          }`}
         />
         <p className="mt-2 text-sm gaegu-regular">{name}</p>
       </div>
@@ -26,14 +36,12 @@ export default function Figure({ image, name, description, real_image }) {
       {selected && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-transparent"
-          onClick={closePopup} // clicking backdrop closes
+          onClick={closePopup}
         >
-          {/* Popup Content (Click inside shouldn't close) */}
           <div
             className="relative flex bg-transparent rounded-xl items-center justify-center gap-4"
-            onClick={(e) => e.stopPropagation()} // prevent bubble-up
+            onClick={(e) => e.stopPropagation()}
           >
-            {/* Left: Static Figure Image */}
             <div className="w-[280px] flex items-center justify-center">
               <img
                 src={image}
@@ -42,7 +50,6 @@ export default function Figure({ image, name, description, real_image }) {
               />
             </div>
 
-            {/* Right: Flip Card */}
             <div
               className="w-[220px] flex items-center justify-center perspective cursor-pointer"
               onClick={() => setFlipped(!flipped)}
@@ -52,7 +59,6 @@ export default function Figure({ image, name, description, real_image }) {
                   flipped ? 'rotate-y-180' : ''
                 }`}
               >
-                {/* Front: Description */}
                 <div className="absolute w-full h-full backface-hidden bg-[#794F41] rounded-lg p-4 shadow-md flex flex-col justify-center items-center text-center">
                   <h3 className="text-lg font-bold mb-2 gaegu-regular text-[#FCC8BA]">
                     {name}
@@ -60,7 +66,6 @@ export default function Figure({ image, name, description, real_image }) {
                   <p className="text-sm text-[#F2F0E5]">{description}</p>
                 </div>
 
-                {/* Back: Real Image */}
                 <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-lg flex items-center justify-center shadow-md overflow-hidden">
                   <img
                     src={real_image}

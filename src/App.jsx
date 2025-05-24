@@ -13,6 +13,7 @@ function App() {
   const [currency, setCurrency] = useState(0);
 
   const [chosenSeriesIndex, setChosenSeriesIndex] = useState(0);
+  let [collectedFigures, setCollectedFigures] = useState([]);
 
   const renderPage = () => {
     switch (currentPage) {
