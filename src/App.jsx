@@ -9,7 +9,6 @@ import Shelf from './pages/Shelf'
 
 
 function App() {
-  const [count, setCount] = useState(0)
   const [currentPage, setCurrentPage] = useState('home');
   const [currency, setCurrency] = useState(0);
 
