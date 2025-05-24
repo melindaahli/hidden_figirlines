@@ -1,12 +1,9 @@
 import { useState } from 'react';
 import LeftButton from '../components/LeftButton.jsx';
 import RightButton from '../components/RightButton.jsx';
+import seriesData from '../../seriesData.json'
 
-const series = [
-  { id: 1, name: 'Sports Series', image: '/path/to/image1.png' },
-  { id: 2, name: 'STEM Series', image: '/path/to/image2.png' },
-  { id: 3, name: 'Politics Series', image: '/path/to/image3.png' },
-];
+const series = seriesData;
 
 function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(1);
