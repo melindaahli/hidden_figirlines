@@ -1,6 +1,6 @@
 import WideButton from '../components/WideButton'
 import FigureList from '../components/FigureList'
-import seriesData from '../../series.json'
+import seriesData from '../../seriesData.json'
 
 export default function Series(props) {
     let seriesIndex = props.chosenSeriesIndex;
