@@ -1,2 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Lexend+Deca:wght@100..900&display=swap');
+
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+@plugin "daisyui/theme" {
+  name: "mytheme";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #FAF8F0;        /* light cream background */
+  --color-base-200: #F2F0E5;        /* slightly darker cream */
+  --color-base-300: #FCC8BA;        /* peachy light */
+  --color-base-content: #794F41;    /* dark brown text */
+
+  --color-primary: #4B966D;         /* green primary */
+  --color-primary-content: #FAF8F0; /* light cream for contrast */
+
+  --color-secondary: #794F41;       /* dark brown secondary */
+  --color-secondary-content: #F2F0E5; /* light cream secondary contrast */
+
+  --color-accent: #FCC8BA;          /* peachy accent */
+  --color-accent-content: #794F41;  /* dark brown accent contrast */
+
+  --color-neutral: #F2F0E5;         /* neutral cream */
+  --color-neutral-content: #4B966D; /* green text on neutral */
+
+  --color-info: #4B966D;            /* green info */
+  --color-info-content: #FAF8F0;    /* light cream info contrast */
+
+  --color-success: #4B966D;         /* green success */
+  --color-success-content: #FAF8F0; /* cream success contrast */
+
+  --color-warning: #FCC8BA;         /* peachy warning */
+  --color-warning-content: #794F41; /* brown warning contrast */
+
+  --color-error: #794F41;           /* brown error */
+  --color-error-content: #FAF8F0;   /* cream error contrast */
+
+  /* border radius */
+  --radius-selector: 1rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+
+  /* base sizes */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  /* border size */
+  --border: 1px;
+
+  /* effects */
+  --depth: 1;
+  --noise: 0;
+}
+
+.lexend-deca-regular {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.lexend-deca-bold {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.gaegu-regular {
+  font-family: "Gaegu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
