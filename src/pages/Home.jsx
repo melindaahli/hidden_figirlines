@@ -1,5 +1,5 @@
 import WideButton from '../components/WideButton.jsx';
-import overlayImage from '../../logooo.png';
+import overlayImage from '../assets/logooo.png';
 
 function Home(props) {
     return (
@@ -14,9 +14,13 @@ function Home(props) {
                     hidden figirlines
                 </p>
             </div>
-            <div className="flex flex-col space-y-4 w-full max-w-xs mt-10">
-                <WideButton text="PLAY" clickFunction={() => props.setCurrentPage('game')} />
-                <WideButton text="STORE" clickFunction={() => props.setCurrentPage('store')} />
+            <div className="flex flex-col items-center space-y-4 mt-10">
+                <div className="w-64">
+                    <WideButton text="PLAY" clickFunction={() => props.setCurrentPage('game')} />
+                </div>
+                <div className="w-64">
+                    <WideButton text="STORE" clickFunction={() => props.setCurrentPage('store')} />
+                </div>
             </div>
         </div>
     );
