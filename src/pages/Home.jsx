@@ -1,5 +1,5 @@
 import WideButton from '../components/WideButton.jsx';
-import overlayImage from '../assets/circle_logo.png';
+import overlayImage from '../assets/logo_circle_FIXED.png';
 
 function Home(props) {
     return (
