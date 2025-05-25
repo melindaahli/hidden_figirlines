@@ -42,7 +42,7 @@ function Carousel(props) {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-full object-cover rounded-[10px] shadow-lg"
+                  className="w-full h-full object-cover rounded-[10px]"
                 />
               </div>
               <span
