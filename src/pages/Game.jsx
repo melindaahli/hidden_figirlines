@@ -1,9 +1,9 @@
 import GameSlots from '../components/GameSlots.jsx'
 
-function Game() {
+function Game({ currency, setCurrency }) {
     return (
         <div>
-            <GameSlots />
+            <GameSlots currency={currency} setCurrency={setCurrency}/>
         </div>
     );
 }
