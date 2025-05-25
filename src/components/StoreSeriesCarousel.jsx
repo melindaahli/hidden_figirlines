@@ -1,12 +1,12 @@
-import { useState } from 'react';
 import LeftButton from '../components/LeftButton.jsx';
 import RightButton from '../components/RightButton.jsx';
 import seriesData from '../../seriesData.json'
 
 const series = seriesData;
 
-function Carousel() {
-  const [currentIndex, setCurrentIndex] = useState(1);
+function Carousel(props) {
+  const currentIndex = props.currentIndex;
+  const setCurrentIndex = props.setCurrentIndex;
 
   const prev = () => {
     setCurrentIndex((prev) => (prev - 1 + series.length) % series.length);

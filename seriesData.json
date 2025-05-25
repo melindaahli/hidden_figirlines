@@ -1,79 +1,79 @@
 [
     {
         "id": 1,
-        "name": "series 1",
-        "image": "https://i.pinimg.com/736x/99/a4/ef/99a4efa511269b33c000c5c03c6de121.jpg",
-        "description": "lorem ipsum description for this blindbox series #1",
+        "name": "SPORTS",
+        "image": "https://www.creativefabrica.com/wp-content/uploads/2022/11/06/Sport-ball-cartoon-vector-Graphics-45089540-1.jpg",
+        "description": "imgimg",
         "options": [
             {
-                "name": "person 1",
-                "image": "https://i.pinimg.com/736x/45/4a/cb/454acbd502b00a22c7b6536fc4acbb37.jpg",
-                "description": "something cool about person 1",
-                "real_image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSeuQ-jdWAW3ex3dgAVZjmghTp51bdkeT21iw3nRtdqbhpm7YrwynWhJ02Oc8lVR46w6daSMz6urf85VKUlyxvgV9n6wVqDk4WpGG8s0XDn"
+                "name": "Billie Jean King",
+                "image": "billie.png",
+                "description": "imgimg",
+                "real_image": "https://cdn.britannica.com/30/199530-050-D76A6892/Billie-Jean-King.jpg"
             },
             {
-                "name": "person 2",
-                "image": "https://i.pinimg.com/736x/7c/52/92/7c5292f1902b7f7982fd4e8f63cbd8c2.jpg",
-                "description": "something cool about person 2",
-                "real_image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTQN-zuGiNmqdh6EegIKUkWsY_Gy3s7f0xgcZavg3uE-usacRilb3OsbtnMG1FZvZGB6zZxf5gmzXOpnkbvxnEVT8PSSCDaIvBq13XbF4ipwgV85hTR8so9rg"
+                "name": "Quan Hongchan",
+                "image": "quan.png",
+                "description": "imgimg",
+                "real_image": "https://news.cgtn.com/news/2024-02-06/Chinese-diver-Quan-wins-first-individual-World-Championship-title-1qXZy1mGQSI/img/ef02261b8adb4542b8b23cbe82a3cc42/ef02261b8adb4542b8b23cbe82a3cc42.jpeg"
             },
             {
-                "name": "person 3",
-                "image": "https://i.pinimg.com/736x/2a/b2/8c/2ab28c4c14cc5dc82f998a5c52c75059.jpg",
-                "description": "something cool about person 3",
-                "real_image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRLz6D4Z2Un-MDDY9Ni9cxk0FH-7h_8GaNhUoX2jZG3U8fIqtPR-i5IOb6F_w0_yYlTcJiCV4ZRWoYFlXYlMzMcMxjhvm5ykXO_rwzcwqldEODv141kwYifUA"
+                "name": "Amelia Earhart",
+                "image": "amelia.png",
+                "description": "imgimg",
+                "real_image": "https://www.meadowlark.org/sites/default/files/styles/large/public/earhart.jpg?itok=VYxs2h4Z"
             }
         ]
     },
     {
         "id": 2,
-        "name": "series 2",
-        "image": "https://i.pinimg.com/736x/99/a4/ef/99a4efa511269b33c000c5c03c6de121.jpg",
-        "description": "lorem ipsum description for this blindbox series #1",
+        "name": "STEM",
+        "image": "https://st2.depositphotos.com/1526816/48269/v/450/depositphotos_482693488-stock-illustration-stem-education-logo-banner-kids.jpg",
+        "description": "imgimg",
         "options": [
             {
-                "name": "person 1",
-                "image": "https://i.pinimg.com/736x/45/4a/cb/454acbd502b00a22c7b6536fc4acbb37.jpg",
-                "description": "something cool about person 1",
-                "real_image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSeuQ-jdWAW3ex3dgAVZjmghTp51bdkeT21iw3nRtdqbhpm7YrwynWhJ02Oc8lVR46w6daSMz6urf85VKUlyxvgV9n6wVqDk4WpGG8s0XDn"
+                "name": "Ada Lovelace",
+                "image": "ada.png",
+                "description": "imgimg",
+                "real_image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Ada_Lovelace_portrait.jpg"
             },
             {
-                "name": "person 2",
-                "image": "https://i.pinimg.com/736x/7c/52/92/7c5292f1902b7f7982fd4e8f63cbd8c2.jpg",
-                "description": "something cool about person 2",
-                "real_image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTQN-zuGiNmqdh6EegIKUkWsY_Gy3s7f0xgcZavg3uE-usacRilb3OsbtnMG1FZvZGB6zZxf5gmzXOpnkbvxnEVT8PSSCDaIvBq13XbF4ipwgV85hTR8so9rg"
+                "name": "Rosalind Franklin",
+                "image": "rosalind.png",
+                "description": "imgimg",
+                "real_image": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Rosalind_Franklin_%28retouched%29.jpg"
             },
             {
-                "name": "person 3",
-                "image": "https://i.pinimg.com/736x/2a/b2/8c/2ab28c4c14cc5dc82f998a5c52c75059.jpg",
-                "description": "something cool about person 3",
-                "real_image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRLz6D4Z2Un-MDDY9Ni9cxk0FH-7h_8GaNhUoX2jZG3U8fIqtPR-i5IOb6F_w0_yYlTcJiCV4ZRWoYFlXYlMzMcMxjhvm5ykXO_rwzcwqldEODv141kwYifUA"
+                "name": "Katherine Johnson",
+                "image": "katherine.png",
+                "description": "imgimg",
+                "real_image": "https://spectrum.ieee.org/media-library/katherine-johnson-at-her-desk-at-nasa-langley-research-center.jpg?id=25588924&width=1000&quality=85"
             }
         ]
     },
     {
         "id": 3,
-        "name": "series 3",
-        "image": "https://i.pinimg.com/736x/99/a4/ef/99a4efa511269b33c000c5c03c6de121.jpg",
-        "description": "lorem ipsum description for this blindbox series #1",
+        "name": "POLITICS",
+        "image": "https://www.politico.com/dims4/default/b82ddd8/2147483647/resize/1160x%3E/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fa7%2Fcb%2Fd9caae8946a0b373cd577725f4cd%2F3-patrick-chappatte-boston-globe.jpg",
+        "description": "imgimg",
         "options": [
             {
-                "name": "person 1",
-                "image": "https://i.pinimg.com/736x/45/4a/cb/454acbd502b00a22c7b6536fc4acbb37.jpg",
-                "description": "something cool about person 1",
-                "real_image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSeuQ-jdWAW3ex3dgAVZjmghTp51bdkeT21iw3nRtdqbhpm7YrwynWhJ02Oc8lVR46w6daSMz6urf85VKUlyxvgV9n6wVqDk4WpGG8s0XDn"
+                "name": "Kamala Harris",
+                "image": "kamala.png",
+                "description": "imgimg",
+                "real_image": "https://static01.nyt.com/images/2024/08/08/multimedia/08pol-dem-joy-topart-gzbt/08pol-dem-joy-topart-gzbt-googleFourByThree.jpg"
             },
             {
-                "name": "person 2",
-                "image": "https://i.pinimg.com/736x/7c/52/92/7c5292f1902b7f7982fd4e8f63cbd8c2.jpg",
-                "description": "something cool about person 2",
-                "real_image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTQN-zuGiNmqdh6EegIKUkWsY_Gy3s7f0xgcZavg3uE-usacRilb3OsbtnMG1FZvZGB6zZxf5gmzXOpnkbvxnEVT8PSSCDaIvBq13XbF4ipwgV85hTR8so9rg"
+                "name": "Ruth Bader Ginsburg",
+                "image": "rbg.png",
+                "description": "imgimg",
+                "real_image": "https://media.newyorker.com/photos/5f59553a694e236d3e6d3e93/master/w_2560%2Cc_limit/Lepore-RBGpostscript.jpg"
             },
             {
-                "name": "person 3",
-                "image": "https://i.pinimg.com/736x/2a/b2/8c/2ab28c4c14cc5dc82f998a5c52c75059.jpg",
-                "description": "something cool about person 3",
-                "real_image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRLz6D4Z2Un-MDDY9Ni9cxk0FH-7h_8GaNhUoX2jZG3U8fIqtPR-i5IOb6F_w0_yYlTcJiCV4ZRWoYFlXYlMzMcMxjhvm5ykXO_rwzcwqldEODv141kwYifUA"
+                "name": "Shirley Chisholm",
+                "image": "shirley.png",
+                "description": "imgimg",
+                "real_image": "https://avoice.cbcfinc.org/wp-content/uploads/2022/05/msrc-cbc009-819x1024.jpg"
             }
         ]
     }
