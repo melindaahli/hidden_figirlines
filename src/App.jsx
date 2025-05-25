@@ -22,7 +22,7 @@ function App() {
       case 'home':
         return <Home setCurrentPage={setCurrentPage} />;
       case 'game':
-        return <Game />;
+        return <Game currency={currency} setCurrency={setCurrency} />;
       case 'store':
         return <Store currentCarouselIndex={currentCarouselIndex} setCurrentCarouselIndex={setCurrentCarouselIndex} setCurrentPage={setCurrentPage} chosenSeriesIndex={chosenSeriesIndex} setChosenSeriesIndex={setChosenSeriesIndex}/>;
       case 'shelf':

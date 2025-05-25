@@ -3,28 +3,27 @@ import { DragDropContext, Droppable, Draggable, } from "@hello-pangea/dnd";
 import events from '../../events.json'
 import WideButton from "./WideButton";
 
-// to do: randomize events every click
+const prizeMoney = 50;
+
 const getRandomEvents = (events, count = 5) => {
     const shuffled = [...events].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
 };
 
-// let initialCards = getRandomEvents(events);
-
-export default function GameSlots() {
+export default function GameSlots({ currency, setCurrency }) {
     const [initialCards, setInitialCards] = useState(getRandomEvents(events));
 
     const [bank, setBank] = useState(initialCards);
 
-    useEffect(() => {
+    const resetEvents = () => {
         const selected = getRandomEvents(events);
         setInitialCards(selected);
-    }, []);
-
-    // When initialCards changes, set bank accordingly (all cards start in the bank)
-    useEffect(() => {
         setBank(initialCards);
-    }, [initialCards]);
+    };
+
+    useEffect(() => {
+        resetEvents();
+    }, []);
 
     const onDragEnd = (result) => {
         const { source, destination } = result;
@@ -48,7 +47,10 @@ export default function GameSlots() {
         }
 
         alert(isCorrect ? "Correct order!" : "Incorrect order, try again!");
-
+        if (isCorrect) { 
+            setCurrency(currency + prizeMoney); 
+            resetEvents();
+        }
     };
 
     return (
