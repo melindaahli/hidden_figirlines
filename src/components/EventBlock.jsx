@@ -1,5 +1,3 @@
-import overlayImage from '../assets/logooo.png';
-
 // change the card and overlayImage part
 export default function EventBlock({ card }) {
 

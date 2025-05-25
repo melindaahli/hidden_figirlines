@@ -12,7 +12,7 @@ import Background from './components/Background.jsx'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
-  const [currency, setCurrency] = useState(0);
+  const [currency, setCurrency] = useState(1000);
   const [currentCarouselIndex, setCurrentCarouselIndex] = useState(1);
 
   const [chosenSeriesIndex, setChosenSeriesIndex] = useState(0);
