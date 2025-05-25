@@ -3,7 +3,6 @@ import Carousel from '../components/StoreSeriesCarousel.jsx'
 import WideButton from '../components/WideButton.jsx'
 
 function Store(props) {
-    
    const selectSeries = () => {
        props.setCurrentPage('series');
        props.setChosenSeriesIndex(props.currentCarouselIndex);
