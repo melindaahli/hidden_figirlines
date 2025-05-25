@@ -26,15 +26,15 @@ function NavBar(props) {
                         </ul>
                     </div>
                     <div>
-                    <button className="text-2xl lexend-deca-bold flex items-center gap-2" onClick={() => props.setCurrentPage('home')}>
-                        <img className="h-7 object-contain"
-                            src={logoo} 
-                            alt="Logo" 
-                        />
-                        <span>
-                            fi<span style={{ color: '#4B966D'}}>girl</span>ines
-                        </span>
-                    </button>
+                        <button className="text-2xl lexend-deca-bold flex items-center gap-2" onClick={() => props.setCurrentPage('home')}>
+                            <img className="h-7 object-contain"
+                                src={logoo}
+                                alt="Logo"
+                            />
+                            <span>
+                                fi<span style={{ color: '#4B966D' }}>girl</span>ines
+                            </span>
+                        </button>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex ">
@@ -51,11 +51,10 @@ function NavBar(props) {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn gaegu-regular rounded-4xl bg-white flex items-center gap-2.5 pl-2.5 pr-2.5">
-                        <img className="h-7 object-contain"
-                            src={coin} 
-                            alt="coin" 
-                        /> {props.currency} </a>
+                    <a className="gaegu-regular rounded-4xl bg-white flex items-center gap-2.5 pl-2.5 pr-2.5 py-1.5 text-sm font-semibold shadow transition">
+                        <img className="h-7 object-contain" src={coin} alt="coin" />
+                        {props.currency}
+                    </a>
                 </div>
             </div>
         </div>
