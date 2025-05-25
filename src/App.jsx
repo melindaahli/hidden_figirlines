@@ -8,6 +8,7 @@ import Store from './pages/Store'
 import Shelf from './pages/Shelf'
 import Series from './pages/Series'
 import Info from './pages/Info'
+import Background from './components/Background.jsx'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -57,6 +58,7 @@ function App() {
   };
 
   return (
+
     <>
       <NavBar setCurrentPage={setCurrentPage} currency={currency} />
 
@@ -65,6 +67,8 @@ function App() {
           <Alert message={alertMessage} />
         </div>)}
 
+      <Background />
+   
       <div className="flex flex-row h-full content-center justify-center items-center overflow-y-auto  mt-15">
         {renderPage()}
       </div>

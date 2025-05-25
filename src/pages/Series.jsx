@@ -13,6 +13,9 @@ export default function Series(props) {
 
     const [modalOpen, setModalOpen] = useState(false);
 
+    const[closedBox, setClosedBox] = useState(specificSeries.image);
+    const[openedBox, setOpenedBox] = useState(specificSeries.open_box);
+
     const [pulledFigure, setPulledFigure] = useState('');
 
     const openModal = () => {
@@ -68,7 +71,7 @@ export default function Series(props) {
                 <FigureList specificSeries={specificSeries} />
                 <WideButton text={"PURCHASE for 150"} clickFunction={() => openBox(specificSeries)} />
             </div>
-            { modalOpen && (<Popup pulledFigure={pulledFigure} openModal={openModal} closeModal={closeModal} />) }
+            { modalOpen && (<Popup pulledFigure={pulledFigure} openModal={openModal} closeModal={closeModal} closedBox={closedBox} openedBox={openedBox}/>) }
         </div>
 
     );

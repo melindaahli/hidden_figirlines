@@ -10,22 +10,22 @@
                 "name": "Billie Jean King",
                 "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/billie.png?raw=true",
                 "description": "A trailblazing tennis champion and gender equality advocate, King won 39 Grand Slam titles and famously defeated Bobby Riggs in the “Battle of the Sexes,” helping pave the way for equal pay and respect in women’s sports.",
-                "back": "",
-                "front": "https://cdn.britannica.com/30/199530-050-D76A6892/Billie-Jean-King.jpg"
+                "back": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/billie_back.png?raw=true",
+                "front": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/billie_front.png?raw=true"
             },
             {
                 "name": "Quan Hongchan",
                 "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/quan.png?raw=true",
                 "description": "A Chinese diving prodigy who stunned the world by winning gold at the 2020 Tokyo Olympics at just 14 years old. Her flawless dives set records and inspired a new generation of athletes.",
-                "back": "",
-                "front": "https://news.cgtn.com/news/2024-02-06/Chinese-diver-Quan-wins-first-individual-World-Championship-title-1qXZy1mGQSI/img/ef02261b8adb4542b8b23cbe82a3cc42/ef02261b8adb4542b8b23cbe82a3cc42.jpeg"
+                "back": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/quan_back.png?raw=true",
+                "front": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/quan_front.png?raw=true"
             },
             {
                 "name": "Amelia Earhart",
                 "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/amelia.png?raw=true",
                 "description": "Though best known as a pioneering aviator, Earhart also broke barriers in sports and adventure. She was the first woman to fly solo across the Atlantic, becoming a symbol of courage and female empowerment worldwide.",
-                "back": "",
-                "front": "https://www.meadowlark.org/sites/default/files/styles/large/public/earhart.jpg?itok=VYxs2h4Z"
+                "back": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/amelia_back.png?raw=true",
+                "front": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/amelia_front.png?raw=true"
             }
         ]
     },
@@ -40,22 +40,22 @@
                 "name": "Ada Lovelace",
                 "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/ada.png?raw=true",
                 "description": "Often regarded as the world's first computer programmer, Lovelace wrote algorithms for Charles Babbage's early mechanical computer, envisioning the future potential of computing long before it was realized.",
-                "back": "",
-                "front": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Ada_Lovelace_portrait.jpg"
+                "back": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/ada_back.png?raw=true",
+                "front": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/ada_front.png?raw=true"
             },
             {
                 "name": "Rosalind Franklin",
                 "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/rosalind.png?raw=true",
                 "description": "A brilliant chemist whose X-ray diffraction work was critical to understanding the double-helix structure of DNA. Her contributions laid the foundation for modern genetics, though recognition came mostly posthumously.",
-                "back": "",
-                "front": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Rosalind_Franklin_%28retouched%29.jpg"
+                "back": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/rosalind_back.png?raw=true",
+                "front": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/rosalind_front.png?raw=true"
             },
             {
                 "name": "Katherine Johnson",
                 "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/katherine.png?raw=true",
                 "description": "A NASA mathematician whose calculations were essential to the success of early U.S. space missions, including the moon landing. Her story gained wide acclaim in Hidden Figures, highlighting her pioneering role as a Black woman in STEM.",
-                "back": "",
-                "front": "https://spectrum.ieee.org/media-library/katherine-johnson-at-her-desk-at-nasa-langley-research-center.jpg?id=25588924&width=1000&quality=85"
+                "back": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/katherine_back.png?raw=true",
+                "front": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/katherine_front.png?raw=true"
             }
         ]
     },
@@ -63,29 +63,29 @@
         "id": 3,
         "name": "POLITICS",
         "image": "https://raw.githubusercontent.com/melindaahli/hidden_figirlines/refs/heads/main/src/assets/political_closed.png",
-        "open_box":"https://raw.githubusercontent.com/melindaahli/hidden_figirlines/refs/heads/main/src/assets/sports_closed.png",
+        "open_box":"https://raw.githubusercontent.com/melindaahli/hidden_figirlines/refs/heads/main/src/assets/political_open.png",
         "description": "the collection of hidden figirlines who were pioneers in politics",
         "options": [
             {
                 "name": "Kamala Harris",
                 "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/kamala.png?raw=true",
                 "description": "The first woman, first Black American, and first South Asian American to serve as Vice President of the United States. Harris has broken numerous barriers and remains a prominent voice for justice and representation.",
-                "back": "",
-                "front": "https://static01.nyt.com/images/2024/08/08/multimedia/08pol-dem-joy-topart-gzbt/08pol-dem-joy-topart-gzbt-googleFourByThree.jpg"
+                "back": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/kamala_back.png?raw=true",
+                "front": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/kamala_front.png?raw=true"
             },
             {
                 "name": "Ruth Bader Ginsburg",
                 "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/rbg.png?raw=true",
                 "description": "A U.S. Supreme Court Justice and fierce advocate for gender equality and civil rights. Her legal legacy and cultural impact made her a feminist icon known simply as “RBG.”",
-                "back": "",
-                "front": "https://media.newyorker.com/photos/5f59553a694e236d3e6d3e93/master/w_2560%2Cc_limit/Lepore-RBGpostscript.jpg"
+                "back": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/ruth_back.png?raw=true",
+                "front": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/ruth_front.png?raw=true"
             },
             {
                 "name": "Shirley Chisholm",
                 "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/shirley.png?raw=true",
                 "description": "The first Black woman elected to the U.S. Congress and the first Black woman to seek a major party’s nomination for President. Her campaign slogan, “Unbought and Unbossed,” still resonates today.",
-                "back": "",
-                "front": "https://avoice.cbcfinc.org/wp-content/uploads/2022/05/msrc-cbc009-819x1024.jpg"
+                "back": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/shirley_back.png?raw=true",
+                "front": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/cards/shirley_front.png?raw=true"
             }
         ]
     }
