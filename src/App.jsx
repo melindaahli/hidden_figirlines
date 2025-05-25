@@ -14,7 +14,8 @@ function App() {
   const [currentCarouselIndex, setCurrentCarouselIndex] = useState(1);
 
   const [chosenSeriesIndex, setChosenSeriesIndex] = useState(0);
-  
+
+  let [collectedFigures, setCollectedFigures] = useState([]);
 
   const renderPage = () => {
     switch (currentPage) {
