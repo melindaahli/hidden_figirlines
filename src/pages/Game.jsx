@@ -7,7 +7,7 @@ function Game({ currency, setCurrency, setCurrentPage, setShowAlert, setAlertMes
       {/* Question mark icon in top-right corner */}
       <button
         onClick={() => setCurrentPage('info')}
-        className="absolute top-4 right-4 text-[#794F41] hover:text-[#A86B5A] transition-colors"
+        className="absolute top-8 left-1/2 -translate-x-1/2 translate-x-[90px] text-[#794F41] hover:text-[#A86B5A] transition-colors"
         aria-label="Help"
       >
         <FaRegQuestionCircle size={28} />
