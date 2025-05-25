@@ -17,6 +17,7 @@ export default function Figure({ image, name, description, front, back, collecte
 
   return (
     <>
+      {/* Bookshelf figure view */}
       <div
         className={`h-full flex-shrink-0 text-center text-white ${
           collected ? 'cursor-pointer' : 'cursor-not-allowed'
@@ -33,34 +34,37 @@ export default function Figure({ image, name, description, front, back, collecte
         <p className="mt-2 text-sm gaegu-regular">{name}</p>
       </div>
 
+      {/* Popup display */}
       {selected && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-transparent"
+          className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm"
           onClick={closePopup}
         >
           <div
-            className="relative flex bg-transparent rounded-xl items-center justify-center gap-4"
+            className="relative flex bg-transparent rounded-xl items-center justify-center gap-12"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="w-[280px] flex items-center justify-center">
+            {/* Enlarged figure */}
+            <div className="w-[400px] flex items-center justify-center">
               <img
                 src={image}
                 alt={name}
-                className="h-[280px] rounded-xl"
+                className="h-[400px] rounded-xl"
               />
             </div>
 
+            {/* Enlarged photocard with flip */}
             <div
-              className="w-[220px] flex items-center justify-center perspective cursor-pointer"
+              className="w-[300px] flex items-center justify-center perspective cursor-pointer"
               onClick={() => setFlipped(!flipped)}
             >
               <div
-                className={`relative w-[220px] h-[308px] transition-transform duration-500 transform-style-preserve-3d ${
+                className={`relative w-[300px] h-[419px] transition-transform duration-500 transform-style-preserve-3d ${
                   flipped ? 'rotate-y-180' : ''
                 }`}
               >
                 {/* FRONT (shows back image) */}
-                <div className="absolute w-full h-full backface-hidden bg-white rounded-lg flex items-center justify-center shadow-md overflow-hidden">
+                <div className="absolute w-full h-full backface-hidden bg-white rounded-lg flex items-center justify-center shadow-xl overflow-hidden">
                   <img
                     src={back}
                     alt={`${name} back`}
@@ -69,7 +73,7 @@ export default function Figure({ image, name, description, front, back, collecte
                 </div>
 
                 {/* BACK (shows front image) */}
-                <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-lg flex items-center justify-center shadow-md overflow-hidden">
+                <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-lg flex items-center justify-center shadow-xl overflow-hidden">
                   <img
                     src={front}
                     alt={`${name} real`}
