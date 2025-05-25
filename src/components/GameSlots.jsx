@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, use } from "react";
 import { DragDropContext, Droppable, Draggable, } from "@hello-pangea/dnd";
 import events from '../../events.json'
 import WideButton from "./WideButton"
@@ -16,10 +16,16 @@ export default function GameSlots({ currency, setCurrency, setShowAlert, setAler
 
     const [bank, setBank] = useState(initialCards);
 
+    const [awaitingReset, setAwaitingReset] = useState(false);
+
+    const [buttonText, setButtonText] = useState("  SUBMIT  ");
+
     const resetEvents = () => {
         const selected = getRandomEvents(events);
         setInitialCards(selected);
         setBank(initialCards);
+        setAwaitingReset(false);
+        setButtonText("  SUBMIT  ");
     };
 
     useEffect(() => {
@@ -29,11 +35,11 @@ export default function GameSlots({ currency, setCurrency, setShowAlert, setAler
     const onDragEnd = (result) => {
         const { source, destination } = result;
         if (!destination) return;
-    
+
         const newBank = [...bank];
         const [movedItem] = newBank.splice(source.index, 1);
         newBank.splice(destination.index, 0, movedItem);
-    
+
         setBank(newBank);
     };
 
@@ -48,12 +54,14 @@ export default function GameSlots({ currency, setCurrency, setShowAlert, setAler
             pastDate = date;
         }
 
-        if (isCorrect) { 
-            setCurrency(currency + prizeMoney); 
+        if (isCorrect) {
+            setCurrency(currency + prizeMoney);
             setAlertMessage(`Cha-ching! + ${prizeMoney}`);
             setAlertType("success");
             setShowAlert(true);
-            resetEvents();
+            setAwaitingReset(true);
+            setButtonText("PLAY AGAIN!");
+            //resetEvents();
         } else {
             setAlertMessage('Incorrect order, try again!');
             setAlertType("error");
@@ -65,39 +73,48 @@ export default function GameSlots({ currency, setCurrency, setShowAlert, setAler
         <div className="p-6">
             <h1 className="text-center text-4xl font-bold mb-8 lexend-deca-bold">Timeline</h1>
             <div className="flex flex-row items-center">
-            <p className="lexend-deca-bold">oldest</p>
-            <DragDropContext onDragEnd={onDragEnd}>
-                <Droppable droppableId="bank" direction="horizontal">
-                    {(provided) => (
-                        <div
-                            className="flex space-x-4 justify-center m-4"
-                            ref={provided.innerRef}
-                            {...provided.droppableProps}
-                        >
-                            {bank.map((card, index) => (
-                                <Draggable draggableId={card.id} index={index} key={card.id}>
-                                    {(provided) => (
-                                        <div
-                                            ref={provided.innerRef}
-                                            {...provided.draggableProps}
-                                            {...provided.dragHandleProps}
-                                        >
-                                            <EventBlock card={card}/>
-                                        </div>
-                                    )}
-                                </Draggable>
-                            ))}
-                            {provided.placeholder}
-                        </div>
-                    )}
-                </Droppable>
-            </DragDropContext>
-            <p className="lexend-deca-bold">latest</p>
+                <p className="lexend-deca-bold">oldest</p>
+                <DragDropContext onDragEnd={onDragEnd}>
+                    <Droppable droppableId="bank" direction="horizontal">
+                        {(provided) => (
+                            <div
+                                className="flex space-x-4 justify-center m-4"
+                                ref={provided.innerRef}
+                                {...provided.droppableProps}
+                            >
+                                {bank.map((card, index) => (
+                                    <Draggable draggableId={card.id} index={index} key={card.id}>
+                                        {(provided) => (
+                                            <div
+                                                ref={provided.innerRef}
+                                                {...provided.draggableProps}
+                                                {...provided.dragHandleProps}
+                                            >
+                                                <EventBlock card={card} />
+                                            </div>
+                                        )}
+                                    </Draggable>
+                                ))}
+                                {provided.placeholder}
+                            </div>
+                        )}
+                    </Droppable>
+                </DragDropContext>
+                <p className="lexend-deca-bold">latest</p>
             </div>
 
             <div className="text-center mt-6 flex justify-center">
-                <WideButton clickFunction={() => handleSubmit()} text={"SUBMIT"} />
+                <WideButton clickFunction={() => handleSubmit()} text={buttonText} />
             </div>
+
+
+            {awaitingReset && (
+                <div
+                className="absolute inset-0 flex items-center justify-center z-50"
+                    onClick={() => resetEvents()}
+                >
+                </div>
+            )}
 
         </div>
     );
