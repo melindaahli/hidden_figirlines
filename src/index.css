@@ -36,7 +36,7 @@
   --color-warning: #FCC8BA;         /* peachy warning */
   --color-warning-content: #794F41; /* brown warning contrast */
 
-  --color-error: #794F41;           /* brown error */
+  --color-error: #b56473; 
   --color-error-content: #FAF8F0;   /* cream error contrast */
 
   /* border radius */

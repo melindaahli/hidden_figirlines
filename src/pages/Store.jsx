@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Carousel from '../components/StoreSeriesCarousel.jsx'
 import WideButton from '../components/WideButton.jsx'
 
@@ -10,8 +9,8 @@ function Store(props) {
 
    return (
        <div>
-           <div className="flex flex-col items-center text-center space-y-4">
-           <h2 className="lexend-deca-bold text-4xl" style={{ position: 'relative', top: '-20px' }}>Blindboxes</h2>
+           <div className="flex flex-col text-center">
+           <h1 className="lexend-deca-bold text-4xl m-5">Blindboxes</h1>
            </div>
            <Carousel currentIndex={props.currentCarouselIndex} setCurrentIndex={props.setCurrentCarouselIndex} />
            <div style={{ display: "flex", justifyContent: "center"}}>

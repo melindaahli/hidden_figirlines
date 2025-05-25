@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { DragDropContext, Droppable, Draggable, } from "@hello-pangea/dnd";
 import events from '../../events.json'
-import WideButton from "./WideButton";
+import WideButton from "./WideButton"
+import EventBlock from "./EventBlock"
 
 const prizeMoney = 50;
 
@@ -10,7 +11,7 @@ const getRandomEvents = (events, count = 5) => {
     return shuffled.slice(0, count);
 };
 
-export default function GameSlots({ currency, setCurrency }) {
+export default function GameSlots({ currency, setCurrency, setShowAlert, setAlertMessage }) {
     const [initialCards, setInitialCards] = useState(getRandomEvents(events));
 
     const [bank, setBank] = useState(initialCards);
@@ -46,10 +47,12 @@ export default function GameSlots({ currency, setCurrency }) {
             pastDate = date;
         }
 
-        alert(isCorrect ? "Correct order!" : "Incorrect order, try again!");
         if (isCorrect) { 
             setCurrency(currency + prizeMoney); 
             resetEvents();
+        } else {
+            setAlertMessage('Incorrect order, try again!');
+            setShowAlert(true);
         }
     };
 
@@ -74,10 +77,11 @@ export default function GameSlots({ currency, setCurrency }) {
                                             {...provided.draggableProps}
                                             {...provided.dragHandleProps}
                                         >
-                                            <div className="p-5 flex flex-col text-center bg-white shadow-md rounded-2xl w-60 h-50 justify-center items-center">
+                                            <EventBlock card={card}/>
+                                            {/* <div className="p-5 flex flex-col text-center bg-white shadow-md rounded-2xl w-60 h-50 justify-center items-center">
                                                 <h1 className="text-sm lexend-deca-regular mb-2">{card.name}</h1>
                                                 <p className="text-[10px] lexend-deca-regular">{card.description}</p>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     )}
                                 </Draggable>

@@ -6,6 +6,8 @@ import seriesData from '../../seriesData.json'
 import Popup from '../components/Popup'
 
 export default function Series(props) {
+    const boxCost = 150;
+
     const seriesIndex = props.chosenSeriesIndex;
     const specificSeries = seriesData[seriesIndex];
 
@@ -22,8 +24,9 @@ export default function Series(props) {
     };
 
     const openBox = (specificSeries) => {
-        if (props.currency < 150) {
-            alert("Not enough coins! You need at least 150!");
+        if (props.currency < boxCost) {
+            props.setAlertMessage("Not enough coins!");
+            props.setShowAlert(true);
         }
         else {
             const figureIndex = Math.floor(Math.random() * specificSeries.options.length);
@@ -41,7 +44,7 @@ export default function Series(props) {
             });
         }
 
-        console.log(props.collectedFigures)
+        // console.log(props.collectedFigures)
         
     };
 
@@ -70,5 +73,3 @@ export default function Series(props) {
 
     );
 }
-
-//modalImage={modalImage} setModalImage={setModalImage} status={status} modalStatus={modalStatus} setModalStatus={setModalStatus} 

@@ -1,21 +1,17 @@
 import overlayImage from '../assets/logooo.png';
 
 // change the card and overlayImage part
-export default function EventBlock() {
-    const card = {
-        name: "Inspiring Woman",
-        description: "A powerful figure who made a lasting impact through her achievements."
-    };
+export default function EventBlock({ card }) {
 
     return (
-        <div className="p-5 flex flex-col text-center bg-white shadow-md rounded-2xl w-60 h-[70vh] justify-center items-center">
+        <div className="p-5 grid-rows-3 text-center bg-white shadow-md rounded-2xl w-60 h-[50vh] justify-between items-center">
             <img 
-                src={overlayImage} 
+                src={card.picture} 
                 alt="Card Visual" 
-                className="w-32 h-32 object-contain mb-4" 
+                className="object-cover row-start-0 row-span-1" 
             />
-            <h1 className="text-sm lexend-deca-regular mb-2">{card.name}</h1>
-            <p className="text-[10px] lexend-deca-regular">{card.description}</p>
+            <h1 className="text-xl/5 mt-4 mb-2 lexend-deca-regular">{card.name}</h1>
+            <p className="text-base/5 tracking-tight gaegu-regular">{card.description}</p>
         </div>
     );
 }
