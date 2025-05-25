@@ -4,7 +4,6 @@ export default function Alert({ message, type="error" }) {
         success: "bg-primary"
     }[type] || "bg-red-500";
 
-
     return (
         <div
             role="alert"
