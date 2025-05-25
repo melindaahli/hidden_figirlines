@@ -26,29 +26,28 @@ function Carousel(props) {
       <div className="flex items-center justify-center space-x-6">
         <LeftButton onClick={prev} />
 
-        {[ -1, 0, 1 ].map((offset) => {
+        {[-1, 0, 1].map((offset) => {
           const item = getItem(offset);
           const isCenter = offset === 0;
 
           return (
             <div key={item.id} className="flex flex-col items-center">
               <div
-                className={`${
-                  isCenter ? 'w-[250px] h-[250px] opacity-100 scale-105 z-10'
-                           : 'w-[170px] h-[170px] opacity-50 scale-95 z-0'
-                } bg-gray-200 rounded-[10px] flex items-center justify-center`}
+
+                className={`${isCenter ? 'w-[250px] h-[250px] opacity-100 scale-105 z-10'
+                    : 'w-[170px] h-[170px] opacity-50 scale-95 z-0'
+                  } bg-transparent rounded-[10px] flex items-center justify-center`}
               >
                 {/* Replace with real images */}
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-full object-cover rounded-[10px]"
+                  className="w-full h-full object-cover rounded-[10px] shadow-lg"
                 />
               </div>
               <span
-                className={`mt-2 text-xs ${
-                  isCenter ? 'font-semibold text-[#744B3D]' : 'text-[#C4AFA6]'
-                }`}
+                className={`mt-2 text-xs ${isCenter ? 'font-semibold text-[#744B3D]' : 'text-[#C4AFA6]'
+                  }`}
               >
                 {item.name}
               </span>

@@ -18,7 +18,7 @@ export default function Figure({ image, name, description, real_image, collected
   return (
     <>
       <div
-        className={`w-24 flex-shrink-0 text-center text-white ${
+        className={`h-full flex-shrink-0 text-center text-white ${
           collected ? 'cursor-pointer' : 'cursor-not-allowed'
         }`}
         onClick={handleClick}
@@ -46,7 +46,7 @@ export default function Figure({ image, name, description, real_image, collected
               <img
                 src={image}
                 alt={name}
-                className="h-[280px] rounded-xl shadow-md"
+                className="h-[280px] rounded-xl"
               />
             </div>
 

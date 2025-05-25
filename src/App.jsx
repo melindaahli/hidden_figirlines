@@ -10,7 +10,7 @@ import Info from './pages/Info'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
-  const [currency, setCurrency] = useState(0);
+  const [currency, setCurrency] = useState(1000);
   const [currentCarouselIndex, setCurrentCarouselIndex] = useState(1);
 
   const [chosenSeriesIndex, setChosenSeriesIndex] = useState(0);
@@ -26,9 +26,9 @@ function App() {
       case 'store':
         return <Store currentCarouselIndex={currentCarouselIndex} setCurrentCarouselIndex={setCurrentCarouselIndex} setCurrentPage={setCurrentPage} chosenSeriesIndex={chosenSeriesIndex} setChosenSeriesIndex={setChosenSeriesIndex}/>;
       case 'shelf':
-        return <Shelf />;
+        return <Shelf collectedFigures={collectedFigures} />;
       case 'series':
-        return <Series setCurrentPage={setCurrentPage} chosenSeriesIndex={chosenSeriesIndex} />;
+        return <Series currency={currency} setCurrency={setCurrency} collectedFigures={collectedFigures} setCollectedFigures={setCollectedFigures} setCurrentPage={setCurrentPage} chosenSeriesIndex={chosenSeriesIndex} />;
       case 'info':
         return <Info setCurrentPage={setCurrentPage}/>;
       default:
