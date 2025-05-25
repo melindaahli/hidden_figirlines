@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
+import Alert from './components/Alert'
 import NavBar from './components/NavBar'
 import Home from './pages/Home'
 import Game from './pages/Game'
@@ -18,30 +19,57 @@ function App() {
 
   let [collectedFigures, setCollectedFigures] = useState([]);
 
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
+
+  useEffect(() => {
+    if (showAlert) {
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 2000);
+    }
+  }, [showAlert]);
+
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
         return <Home setCurrentPage={setCurrentPage} />;
       case 'game':
-        return <Game currency={currency} setCurrency={setCurrency} setCurrentPage={setCurrentPage}/>;
+        return <Game setCurrentPage={setCurrentPage}
+                     currency={currency} setCurrency={setCurrency}
+                     setShowAlert={setShowAlert} setAlertMessage={setAlertMessage} />;
       case 'store':
-        return <Store currentCarouselIndex={currentCarouselIndex} setCurrentCarouselIndex={setCurrentCarouselIndex} setCurrentPage={setCurrentPage} chosenSeriesIndex={chosenSeriesIndex} setChosenSeriesIndex={setChosenSeriesIndex}/>;
+        return <Store setCurrentPage={setCurrentPage}
+                      currentCarouselIndex={currentCarouselIndex} setCurrentCarouselIndex={setCurrentCarouselIndex}
+                      chosenSeriesIndex={chosenSeriesIndex} setChosenSeriesIndex={setChosenSeriesIndex} />;
       case 'shelf':
         return <Shelf collectedFigures={collectedFigures} />;
       case 'series':
-        return <Series currency={currency} setCurrency={setCurrency} collectedFigures={collectedFigures} setCollectedFigures={setCollectedFigures} setCurrentPage={setCurrentPage} chosenSeriesIndex={chosenSeriesIndex} />;
+        return <Series setCurrentPage={setCurrentPage}
+                       currency={currency} setCurrency={setCurrency}
+                       collectedFigures={collectedFigures} setCollectedFigures={setCollectedFigures}
+                       chosenSeriesIndex={chosenSeriesIndex}
+                       setShowAlert={setShowAlert} setAlertMessage={setAlertMessage} />;
       case 'info':
-        return <Info setCurrentPage={setCurrentPage}/>;
+        return <Info setCurrentPage={setCurrentPage} />;
       default:
         return <Home />;
     }
   };
 
   return (
-    <> 
-      <NavBar setCurrentPage={setCurrentPage} currency={currency}/>
+
+    <>
+      <NavBar setCurrentPage={setCurrentPage} currency={currency} />
+
+      {showAlert && (
+        <div className="fixed inset-0 flex top-20 h-[55px] justify-center">
+          <Alert message={alertMessage} />
+        </div>)}
+
       <Background />
-      <div className="flex flex-row h-svh justify-center items-center">
+   
+      <div className="flex flex-row h-full content-center justify-center items-center overflow-y-auto  mt-15">
         {renderPage()}
       </div>
     </>
