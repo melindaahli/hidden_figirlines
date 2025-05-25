@@ -1,7 +1,7 @@
 import { FaRegQuestionCircle } from 'react-icons/fa';
 import GameSlots from '../components/GameSlots.jsx';
 
-function Game({ currency, setCurrency, setCurrentPage }) {
+function Game({ currency, setCurrency, setCurrentPage, setShowAlert, setAlertMessage}) {
   return (
     <div className="relative">
       {/* Question mark icon in top-right corner */}
@@ -13,7 +13,8 @@ function Game({ currency, setCurrency, setCurrentPage }) {
         <FaRegQuestionCircle size={28} />
       </button>
 
-      <GameSlots currency={currency} setCurrency={setCurrency} />
+      <GameSlots currency={currency} setCurrency={setCurrency}
+                 setShowAlert={setShowAlert} setAlertMessage={setAlertMessage} />
     </div>
   );
 }
