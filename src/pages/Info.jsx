@@ -6,7 +6,7 @@ export default function Info({ setCurrentPage }) {
       {/* Left: Rectangular screen-like image */}
       <div className="bg-[#794F41] p-3 rounded-lg shadow-lg">
         <img
-          src="https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/timeline.gif?raw=true"
+          src="./public/timeline.gif"
           alt="Mock Game Screen"
           className="w-[720px] h-[400px] object-cover rounded-lg"
         />
