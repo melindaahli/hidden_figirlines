@@ -40,7 +40,7 @@ export default function Popup(props) {
                     <img src={modalImage} alt="Blind Box" 
                         className={`object-contain ${isOpenedBox ? 'mt-[-90px] mr-[-30px]' : ''}`}  
                         onClick={() => updateModalStatus()}
-                        style={{width: isOpenedBox ? '700px' : '450px'}}
+                        style={{width: isOpenedBox ? '740px' : '600px'}}
                     />
                 </div>
         </div>
