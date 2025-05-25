@@ -35,7 +35,7 @@ export default function Figure({ image, name, description, front, collected }) {
 
       {selected && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-transparent"
+          className="fixed inset-0 z-50 flex items-center justify-center frontdrop-blur-sm bg-transparent"
           onClick={closePopup}
         >
           <div
@@ -59,14 +59,14 @@ export default function Figure({ image, name, description, front, collected }) {
                   flipped ? 'rotate-y-180' : ''
                 }`}
               >
-                <div className="absolute w-full h-full backface-hidden bg-[#794F41] rounded-lg p-4 shadow-md flex flex-col justify-center items-center text-center">
+                <div className="absolute w-full h-full frontface-hidden bg-[#794F41] rounded-lg p-4 shadow-md flex flex-col justify-center items-center text-center">
                   <h3 className="text-lg font-bold mb-2 gaegu-regular text-[#FCC8BA]">
                     {name}
                   </h3>
                   <p className="text-sm text-[#F2F0E5]">{description}</p>
                 </div>
 
-                <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-lg flex items-center justify-center shadow-md overflow-hidden">
+                <div className="absolute w-full h-full frontface-hidden rotate-y-180 bg-white rounded-lg flex items-center justify-center shadow-md overflow-hidden">
                   <img
                     src={front}
                     alt={`${name} real`}
