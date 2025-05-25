@@ -2,7 +2,7 @@ import WideButton from '../components/WideButton';
 
 export default function Info({ setCurrentPage }) {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#FAF8F0] p-12 gap-16">
+    <div className="flex items-center justify-center p-12 gap-16">
       {/* Left: Rectangular screen-like image */}
       <div className="bg-[#794F41] p-3 rounded-lg shadow-lg">
         <img
