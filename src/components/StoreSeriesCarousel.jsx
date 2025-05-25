@@ -34,8 +34,8 @@ function Carousel(props) {
             <div key={item.id} className="flex flex-col items-center">
               <div
                 className={`${
-                  isCenter ? 'w-[250px] h-[250px] opacity-100 scale-105 z-10'
-                           : 'w-[170px] h-[170px] opacity-50 scale-95 z-0'
+                  isCenter ? 'w-[350px] h-[350px] opacity-100 scale-115 z-10 mb-5'
+                           : 'w-[300px] h-[250px] opacity-50 scale-75 z-0'
                 } bg-transparent rounded-[10px] flex items-center justify-center`}
               >
                 {/* Replace with real images */}
@@ -46,7 +46,7 @@ function Carousel(props) {
                 />
               </div>
               <span
-                className={`mt-2 text-xs ${
+                className={` text-xs ${
                   isCenter ? 'font-semibold text-[#744B3D]' : 'text-[#C4AFA6]'
                 }`}
               >
