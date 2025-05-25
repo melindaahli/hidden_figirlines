@@ -63,7 +63,7 @@
         "id": 3,
         "name": "POLITICS",
         "image": "https://raw.githubusercontent.com/melindaahli/hidden_figirlines/refs/heads/main/src/assets/political_closed.png",
-        "open_box":"https://raw.githubusercontent.com/melindaahli/hidden_figirlines/refs/heads/main/src/assets/sports_closed.png",
+        "open_box":"https://raw.githubusercontent.com/melindaahli/hidden_figirlines/refs/heads/main/src/assets/political_open.png",
         "description": "the collection of hidden figirlines who were pioneers in politics",
         "options": [
             {
