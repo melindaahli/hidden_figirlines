@@ -67,8 +67,20 @@ export default function GameSlots() {
 
     const handleSubmit = () => {
         console.log("Submitted Timeline:", timeline);
-        // alert(isCorrect ? "Correct order!" : "Incorrect order, try again!");
-        alert(timeline);
+
+        let isCorrect = true;
+
+        let pastDate = 0;
+        for (let i = 0; i < timeline.length; i++) {
+            let event = timeline[i];
+            let date = event.date;
+            console.log(date); // Access element at index i
+            if (date < pastDate) { isCorrect = false; }
+            pastDate = date;
+        }
+
+        alert(isCorrect ? "Correct order!" : "Incorrect order, try again!");
+
     };
 
     return (
