@@ -36,7 +36,7 @@ function Carousel(props) {
                 className={`${
                   isCenter ? 'w-[250px] h-[250px] opacity-100 scale-105 z-10'
                            : 'w-[170px] h-[170px] opacity-50 scale-95 z-0'
-                } bg-gray-200 rounded-[10px] flex items-center justify-center`}
+                } bg-transparent rounded-[10px] flex items-center justify-center`}
               >
                 {/* Replace with real images */}
                 <img
