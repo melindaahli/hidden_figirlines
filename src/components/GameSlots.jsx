@@ -55,8 +55,7 @@ export default function GameSlots({ currency, setCurrency }) {
 
     return (
         <div className="p-6">
-            <h1 className="text-center text-4xl font-bold mb-8">Timeline</h1>
-
+            <h1 className="text-center text-4xl font-bold mb-8 lexend-deca-bold">Timeline</h1>
             <div className="flex flex-row items-center">
             <p className="lexend-deca-bold">oldest</p>
             <DragDropContext onDragEnd={onDragEnd}>
