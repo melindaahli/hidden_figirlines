@@ -54,11 +54,11 @@ export default function Series(props) {
 
     return (
         <div className="flex items-center">
-            <div className="p-8">
+            <div className="">
                 <img
                     src={specificSeries['image']}
                     alt="Series Box"
-                    className="w-96 h-auto"
+                    className="w-130 h-auto"
                 />
             </div>
             <div className="flex flex-col gap-[4vh]">
