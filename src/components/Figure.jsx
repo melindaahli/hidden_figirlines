@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Figure({ image, name, description, real_image, collected }) {
+export default function Figure({ image, name, description, front, collected }) {
   const [selected, setSelected] = useState(false);
   const [flipped, setFlipped] = useState(false);
 
@@ -68,7 +68,7 @@ export default function Figure({ image, name, description, real_image, collected
 
                 <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-lg flex items-center justify-center shadow-md overflow-hidden">
                   <img
-                    src={real_image}
+                    src={front}
                     alt={`${name} real`}
                     className="h-full w-full object-contain rounded"
                   />
