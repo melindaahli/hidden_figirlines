@@ -18,10 +18,10 @@ export default function Info({ setCurrentPage }) {
         <h1 className="text-4xl font-bold text-[#794F41] lexend-deca-regular">How to Play</h1>
 
         <p className="text-[#794F41] text-lg gaegu-regular">
-          1. Five historical events will be displayed. <br />
-          2. Drag and drop to place them on the timeline. <br />
-          3. insert stuff about correctness and stuff. <br />
-          4. Can you sort all events in chronological order?
+          ~ Five historical events will be displayed. <br />
+          ~ Drag and drop to place them on the timeline. <br />
+          ~ If correct, earn 50 coins!!! <br />
+          ~ Can you sort all events in chronological order?
         </p>
 
         <div className="mt-4">
