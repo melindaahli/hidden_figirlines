@@ -15,6 +15,7 @@ export default function ShelfRow({ series, collectedFigures }) {
                             name={option.name}
                             description={option.description}
                             front={option.front}
+                            back={option.back}
                             collected={isCollected}
                         />
                     );
