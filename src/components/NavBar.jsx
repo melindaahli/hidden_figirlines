@@ -1,3 +1,5 @@
+import logoo from "../assets/logo_brown.png"
+
 function NavBar(props) {
 
     return (
@@ -15,26 +17,32 @@ function NavBar(props) {
                                 <button onClick={() => props.setCurrentPage('game')}>GAME</button>
                             </li>
                             <li>
-                                <button onClick={() => props.setCurrentPage('store')}>OPEN</button>
+                                <button onClick={() => props.setCurrentPage('store')}>STORE</button>
                             </li>
                             <li>
                                 <button onClick={() => props.setCurrentPage('shelf')}>SHELF</button>
                             </li>
                         </ul>
                     </div>
-                    <button className="btn btn-ghost text-xl lexend-deca-bold"
-                        onClick={() => props.setCurrentPage('home')}>
-                        figirlines
+                    <div>
+                    <button className="text-2xl lexend-deca-bold flex items-center gap-2" onClick={() => props.setCurrentPage('home')}>
+                        <img className="h-7 object-contain"
+                            src={logoo} 
+                            alt="Logo" 
+                        />
+                        <span>
+                            fi<span style={{ color: '#4B966D'}}>girl</span>ines
+                        </span>
                     </button>
-
+                    </div>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 lexend-deca-regular">
+                <div className="navbar-center hidden lg:flex ">
+                    <ul className="menu menu-horizontal lexend-deca-regular flex gap-x-18">
                         <li>
                             <button onClick={() => props.setCurrentPage('game')}>GAME</button>
                         </li>
                         <li>
-                            <button onClick={() => props.setCurrentPage('store')}>OPEN</button>
+                            <button onClick={() => props.setCurrentPage('store')}>STORE</button>
                         </li>
                         <li>
                             <button onClick={() => props.setCurrentPage('shelf')}>SHELF</button>
