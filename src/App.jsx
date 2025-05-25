@@ -7,6 +7,7 @@ import Store from './pages/Store'
 import Shelf from './pages/Shelf'
 import Series from './pages/Series'
 import Info from './pages/Info'
+import Background from './components/Background.jsx'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -39,6 +40,7 @@ function App() {
   return (
     <> 
       <NavBar setCurrentPage={setCurrentPage} currency={currency}/>
+      <Background />
       <div className="flex flex-row h-svh justify-center items-center">
         {renderPage()}
       </div>
