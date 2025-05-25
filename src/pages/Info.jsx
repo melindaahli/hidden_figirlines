@@ -19,9 +19,9 @@ export default function Info({ setCurrentPage }) {
 
         <p className="text-[#794F41] text-lg gaegu-regular">
           1. Five historical events will be displayed. <br />
-          2. Drag and drop to place them on the timeline. <br />
-          3. insert stuff about correctness and stuff. <br />
-          4. Can you sort all events in chronological order?
+          2. Drag and drop to sort them on the timeline. <br />
+          3. If correct, earn 50 coins!!! <br />
+          4. Can you place all events in chronological order?
         </p>
 
         <div className="mt-4">
