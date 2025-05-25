@@ -11,8 +11,10 @@ import Info from './pages/Info'
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [currency, setCurrency] = useState(0);
+  const [currentCarouselIndex, setCurrentCarouselIndex] = useState(1);
 
   const [chosenSeriesIndex, setChosenSeriesIndex] = useState(0);
+
   let [collectedFigures, setCollectedFigures] = useState([]);
 
   const renderPage = () => {
@@ -22,7 +24,7 @@ function App() {
       case 'game':
         return <Game />;
       case 'store':
-        return <Store setCurrentPage={setCurrentPage} chosenSeriesIndex={chosenSeriesIndex} setChosenSeriesIndex={setChosenSeriesIndex}/>;
+        return <Store currentCarouselIndex={currentCarouselIndex} setCurrentCarouselIndex={setCurrentCarouselIndex} setCurrentPage={setCurrentPage} chosenSeriesIndex={chosenSeriesIndex} setChosenSeriesIndex={setChosenSeriesIndex}/>;
       case 'shelf':
         return <Shelf />;
       case 'series':
