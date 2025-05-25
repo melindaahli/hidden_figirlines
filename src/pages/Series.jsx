@@ -29,6 +29,7 @@ export default function Series(props) {
     const openBox = (specificSeries) => {
         if (props.currency < boxCost) {
             props.setAlertMessage("Not enough coins!");
+            props.setAlertType("error");
             props.setShowAlert(true);
         }
         else {
