@@ -1,36 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import React, { useState } from "react";
+import { DragDropContext, Droppable, Draggable, } from "@hello-pangea/dnd";
 import events from '../../events.json'
+import WideButton from "./WideButton";
 
+// to do: randomize events every click
 const getRandomEvents = (events, count = 5) => {
     const shuffled = [...events].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
 };
 
-const GameSlots = () => {
-    // Pick 5 random events once on mount
-    const [initialCards, setInitialCards] = useState([]);
-    const [answerKey, setAnswerKey] = useState([]);
+let initialCards = getRandomEvents(events);
 
-    useEffect(() => {
-        const selected = getRandomEvents(events, 5);
-        setInitialCards(selected);
-
-        // Assuming events in JSON are already ordered chronologically,
-        // sort selected events by their index in original events array for answer key
-        const sortedAnswerKey = [...selected].sort(
-            (a, b) => events.findIndex(e => e.id === a.id) - events.findIndex(e => e.id === b.id)
-        );
-        setAnswerKey(sortedAnswerKey);
-    }, []);
-
+export default function GameSlots() {
+    const [bank, setBank] = useState(initialCards);
     const [timeline, setTimeline] = useState([null, null, null, null, null]);
-    const [bank, setBank] = useState([]);
-
-    // When initialCards changes, set bank accordingly (all cards start in the bank)
-    useEffect(() => {
-        setBank(initialCards);
-    }, [initialCards]);
 
     const onDragEnd = (result) => {
         const { source, destination, draggableId } = result;
@@ -83,42 +66,42 @@ const GameSlots = () => {
     };
 
     const handleSubmit = () => {
-        // Check if timeline order matches answerKey order
-        // Both timeline and answerKey are arrays of objects
-        // Check if all IDs match in order
-        const isCorrect = timeline.every((card, idx) => card && card.id === answerKey[idx].id);
-        console.log("Timeline:", timeline);
-        console.log("Answer Key:", answerKey);
-        alert(isCorrect ? "Correct order!" : "Incorrect order, try again!");
+        console.log("Submitted Timeline:", timeline);
+        // alert(isCorrect ? "Correct order!" : "Incorrect order, try again!");
+        alert(timeline);
     };
 
     return (
-        <div className="p-8">
-            <h1 className="text-center text-2xl mb-4 font-bold">Timeline</h1>
+        <div className="p-6">
+            <h1 className="text-center text-2xl font-bold mb-4">Timeline</h1>
+
             <DragDropContext onDragEnd={onDragEnd}>
-                <div className="flex justify-center gap-4 mb-6">
-                    {timeline.map((card, idx) => (
-                        <Droppable droppableId={`slot-${idx}`} key={idx}>
+
+
+
+                <div className="flex justify-center space-x-4 mb-6">
+                    {timeline.map((card, index) => (
+                        <Droppable droppableId={`slot-${index}`} key={index}>
                             {(provided) => (
                                 <div
+                                    className="w-40 h-24 border-2 border-red-300 rounded flex items-center justify-center bg-gray-50"
                                     ref={provided.innerRef}
                                     {...provided.droppableProps}
-                                    className="w-40 h-24 border-2 shadow-md border-red-200 rounded-xl flex items-center justify-center"
                                 >
                                     {card ? (
-                                        <Draggable draggableId={card.id} index={idx} key={card.id}>
+                                        <Draggable draggableId={card.id} index={0}>
                                             {(provided) => (
                                                 <div
-                                                    className="p-2 bg-white shadow-md rounded w-40 h-24 flex items-center justify-center text-center"
                                                     ref={provided.innerRef}
                                                     {...provided.draggableProps}
                                                     {...provided.dragHandleProps}
+                                                    className="p-2 bg-white shadow-md rounded"
                                                 >
                                                     {card.name}
                                                 </div>
                                             )}
                                         </Draggable>
-                                    ) : null}
+                                    ) : (<></>)}
                                     {provided.placeholder}
                                 </div>
                             )}
@@ -129,15 +112,15 @@ const GameSlots = () => {
                 <Droppable droppableId="bank" direction="horizontal">
                     {(provided) => (
                         <div
+                            className="flex space-x-4 justify-center"
                             ref={provided.innerRef}
                             {...provided.droppableProps}
-                            className="flex gap-4 justify-center mb-6"
                         >
                             {bank.map((card, index) => (
                                 <Draggable draggableId={card.id} index={index} key={card.id}>
                                     {(provided) => (
                                         <div
-                                            className="p-2 bg-white shadow-md rounded w-40 h-24 flex items-center justify-center text-center"
+                                            className="p-2 bg-white border shadow-md rounded w-40 h-24 flex items-center justify-center text-center"
                                             ref={provided.innerRef}
                                             {...provided.draggableProps}
                                             {...provided.dragHandleProps}
@@ -152,16 +135,11 @@ const GameSlots = () => {
                     )}
                 </Droppable>
             </DragDropContext>
-            <div className="text-center" style={{ display: "flex", justifyContent: "center" }}>
-                <button
-                    onClick={handleSubmit}
-                    className="btn btn-wide btn-primary rounded-4xl lexend-deca-bold flex flex-col space-y-4 mt-4 text-2xl gaegu-regular"
-                >
-                    SUBMIT
-                </button>
+
+            <div className="text-center mt-6 flex justify-center">
+                <WideButton clickFunction={() => handleSubmit()} text={"SUBMIT"} />
             </div>
+
         </div>
     );
-};
-
-export default GameSlots;
+}
