@@ -11,7 +11,7 @@ const getRandomEvents = (events, count = 5) => {
     return shuffled.slice(0, count);
 };
 
-export default function GameSlots({ currency, setCurrency, setShowAlert, setAlertMessage }) {
+export default function GameSlots({ currency, setCurrency, setShowAlert, setAlertMessage, setAlertType }) {
     const [initialCards, setInitialCards] = useState(getRandomEvents(events));
 
     const [bank, setBank] = useState(initialCards);
@@ -38,6 +38,7 @@ export default function GameSlots({ currency, setCurrency, setShowAlert, setAler
     };
 
     const handleSubmit = () => {
+        console.log("submission separator");
         let isCorrect = true;
         let pastDate = 0;
         for (let i = 0; i < bank.length; i++) {
@@ -49,9 +50,13 @@ export default function GameSlots({ currency, setCurrency, setShowAlert, setAler
 
         if (isCorrect) { 
             setCurrency(currency + prizeMoney); 
+            setAlertMessage(`Cha-ching! + ${prizeMoney}`);
+            setAlertType("success");
+            setShowAlert(true);
             resetEvents();
         } else {
             setAlertMessage('Incorrect order, try again!');
+            setAlertType("error");
             setShowAlert(true);
         }
     };

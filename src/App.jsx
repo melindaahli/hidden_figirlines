@@ -12,7 +12,7 @@ import Background from './components/Background.jsx'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
-  const [currency, setCurrency] = useState(1000);
+  const [currency, setCurrency] = useState(0);
   const [currentCarouselIndex, setCurrentCarouselIndex] = useState(1);
 
   const [chosenSeriesIndex, setChosenSeriesIndex] = useState(0);
@@ -21,6 +21,7 @@ function App() {
 
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
+  const [alertType, setAlertType] = useState("error");
 
   useEffect(() => {
     if (showAlert) {
@@ -37,7 +38,7 @@ function App() {
       case 'game':
         return <Game setCurrentPage={setCurrentPage}
                      currency={currency} setCurrency={setCurrency}
-                     setShowAlert={setShowAlert} setAlertMessage={setAlertMessage} />;
+                     setShowAlert={setShowAlert} setAlertMessage={setAlertMessage} setAlertType={setAlertType} />;
       case 'store':
         return <Store setCurrentPage={setCurrentPage}
                       currentCarouselIndex={currentCarouselIndex} setCurrentCarouselIndex={setCurrentCarouselIndex}
@@ -49,7 +50,7 @@ function App() {
                        currency={currency} setCurrency={setCurrency}
                        collectedFigures={collectedFigures} setCollectedFigures={setCollectedFigures}
                        chosenSeriesIndex={chosenSeriesIndex}
-                       setShowAlert={setShowAlert} setAlertMessage={setAlertMessage} />;
+                       setShowAlert={setShowAlert} setAlertMessage={setAlertMessage} setAlertType={setAlertType} />;
       case 'info':
         return <Info setCurrentPage={setCurrentPage} />;
       default:
@@ -64,7 +65,7 @@ function App() {
 
       {showAlert && (
         <div className="fixed inset-0 flex top-20 h-[55px] justify-center">
-          <Alert message={alertMessage} />
+          <Alert message={alertMessage} type={alertType} />
         </div>)}
 
       <Background />
