@@ -1,4 +1,5 @@
 import logoo from "../assets/logo_brown.png"
+import coin from "../assets/Coin.png"
 
 function NavBar(props) {
 
@@ -50,7 +51,11 @@ function NavBar(props) {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn gaegu-regular rounded-4xl bg-white">coins {props.currency}</a>
+                    <a className="btn gaegu-regular rounded-4xl bg-white flex items-center gap-2.5 pl-2.5 pr-2.5">
+                        <img className="h-7 object-contain"
+                            src={coin} 
+                            alt="coin" 
+                        /> {props.currency} </a>
                 </div>
             </div>
         </div>
