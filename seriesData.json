@@ -7,19 +7,19 @@
         "options": [
             {
                 "name": "Billie Jean King",
-                "image": "billie.png",
+                "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/billie.png?raw=true",
                 "description": "imgimg",
                 "real_image": "https://cdn.britannica.com/30/199530-050-D76A6892/Billie-Jean-King.jpg"
             },
             {
                 "name": "Quan Hongchan",
-                "image": "quan.png",
+                "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/quan.png?raw=true",
                 "description": "imgimg",
                 "real_image": "https://news.cgtn.com/news/2024-02-06/Chinese-diver-Quan-wins-first-individual-World-Championship-title-1qXZy1mGQSI/img/ef02261b8adb4542b8b23cbe82a3cc42/ef02261b8adb4542b8b23cbe82a3cc42.jpeg"
             },
             {
                 "name": "Amelia Earhart",
-                "image": "amelia.png",
+                "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/amelia.png?raw=true",
                 "description": "imgimg",
                 "real_image": "https://www.meadowlark.org/sites/default/files/styles/large/public/earhart.jpg?itok=VYxs2h4Z"
             }
@@ -33,19 +33,19 @@
         "options": [
             {
                 "name": "Ada Lovelace",
-                "image": "ada.png",
+                "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/ada.png?raw=true",
                 "description": "imgimg",
                 "real_image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Ada_Lovelace_portrait.jpg"
             },
             {
                 "name": "Rosalind Franklin",
-                "image": "rosalind.png",
+                "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/rosalind.png?raw=true",
                 "description": "imgimg",
                 "real_image": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Rosalind_Franklin_%28retouched%29.jpg"
             },
             {
                 "name": "Katherine Johnson",
-                "image": "katherine.png",
+                "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/katherine.png?raw=true",
                 "description": "imgimg",
                 "real_image": "https://spectrum.ieee.org/media-library/katherine-johnson-at-her-desk-at-nasa-langley-research-center.jpg?id=25588924&width=1000&quality=85"
             }
@@ -59,19 +59,19 @@
         "options": [
             {
                 "name": "Kamala Harris",
-                "image": "kamala.png",
+                "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/kamala.png?raw=true",
                 "description": "imgimg",
                 "real_image": "https://static01.nyt.com/images/2024/08/08/multimedia/08pol-dem-joy-topart-gzbt/08pol-dem-joy-topart-gzbt-googleFourByThree.jpg"
             },
             {
                 "name": "Ruth Bader Ginsburg",
-                "image": "rbg.png",
+                "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/rbg.png?raw=true",
                 "description": "imgimg",
                 "real_image": "https://media.newyorker.com/photos/5f59553a694e236d3e6d3e93/master/w_2560%2Cc_limit/Lepore-RBGpostscript.jpg"
             },
             {
                 "name": "Shirley Chisholm",
-                "image": "shirley.png",
+                "image": "https://github.com/melindaahli/hidden_figirlines/blob/main/src/assets/shirley.png?raw=true",
                 "description": "imgimg",
                 "real_image": "https://avoice.cbcfinc.org/wp-content/uploads/2022/05/msrc-cbc009-819x1024.jpg"
             }
