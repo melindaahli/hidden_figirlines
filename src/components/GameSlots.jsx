@@ -78,10 +78,6 @@ export default function GameSlots({ currency, setCurrency, setShowAlert, setAler
                                             {...provided.dragHandleProps}
                                         >
                                             <EventBlock card={card}/>
-                                            {/* <div className="p-5 flex flex-col text-center bg-white shadow-md rounded-2xl w-60 h-50 justify-center items-center">
-                                                <h1 className="text-sm lexend-deca-regular mb-2">{card.name}</h1>
-                                                <p className="text-[10px] lexend-deca-regular">{card.description}</p>
-                                            </div> */}
                                         </div>
                                     )}
                                 </Draggable>
