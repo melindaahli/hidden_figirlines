@@ -44,9 +44,13 @@ export default function Series(props) {
                 />
             </div>
             <div className="flex flex-col gap-[4vh]">
-                <p className="lexend-deca-regular text-base" onClick={() => props.setCurrentPage('store')}>&lt; back to boxes</p>
+                <div className="flex justify-start w-full">
+                    <button className="lexend-deca-regular text-base" onClick={() => props.setCurrentPage('store')}>&lt; back to boxes</button>
+                </div>
                 <h1 className="lexend-deca-bold text-6xl">{specificSeries['name']}</h1>
-                <p className="gaegu-regular text-2xl">{specificSeries['description']}</p>
+                <div className="max-w-lg">
+                    <p className="gaegu-regular text-2xl text-pretty">{specificSeries['description']}</p>
+                </div>
                 <FigureList specificSeries={specificSeries} />
                 <WideButton text={"OPEN BOX"} clickFunction={() => openBox(specificSeries)} />
             </div>
