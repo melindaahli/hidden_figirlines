@@ -6,19 +6,14 @@ import seriesData from '../../seriesData.json'
 import Popup from '../components/Popup'
 
 export default function Series(props) {
-    
-
     const seriesIndex = props.chosenSeriesIndex;
     const specificSeries = seriesData[seriesIndex];
 
     const [modalOpen, setModalOpen] = useState(false);
 
-    
-
     const [pulledFigure, setPulledFigure] = useState('');
-    // add pulledFigure to a state set in app of all collected figures
 
-    const openModal = (imgUrl) => {
+    const openModal = () => {
         setModalOpen(true);
     };
 
@@ -27,12 +22,28 @@ export default function Series(props) {
     };
 
     const openBox = (specificSeries) => {
-        const figureIndex = Math.floor(Math.random() * specificSeries.options.length);
-        const selectedFigure = specificSeries.options[figureIndex];
-        setPulledFigure(selectedFigure);
-        openModal(selectedFigure.image);
-    };
+        if (props.currency < 150) {
+            alert("Not enough coins! You need at least 150!");
+        }
+        else {
+            const figureIndex = Math.floor(Math.random() * specificSeries.options.length);
+            const selectedFigure = specificSeries.options[figureIndex];
+            setPulledFigure(selectedFigure);
+            openModal();
+            props.setCurrency(props.currency - 150);
 
+            props.setCollectedFigures(prevFigures => {
+                const alreadyCollected = prevFigures.some(fig => fig.name === selectedFigure.name);
+                if (!alreadyCollected) {
+                    return [...prevFigures, selectedFigure];
+                }
+                return prevFigures;
+            });
+        }
+
+        console.log(props.collectedFigures)
+        
+    };
 
     return (
         <div className="flex items-center">
@@ -52,7 +63,7 @@ export default function Series(props) {
                     <p className="gaegu-regular text-2xl text-pretty">{specificSeries['description']}</p>
                 </div>
                 <FigureList specificSeries={specificSeries} />
-                <WideButton text={"OPEN BOX"} clickFunction={() => openBox(specificSeries)} />
+                <WideButton text={"PURCHASE for 150"} clickFunction={() => openBox(specificSeries)} />
             </div>
             { modalOpen && (<Popup pulledFigure={pulledFigure} openModal={openModal} closeModal={closeModal} />) }
         </div>

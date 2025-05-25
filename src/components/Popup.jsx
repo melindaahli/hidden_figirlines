@@ -14,7 +14,6 @@ export default function Popup(props) {
     const [modalStatus, setModalStatus] = useState(status.closedBox);
 
     const updateModalStatus = () => {
-        console.log(modalStatus);
         switch (modalStatus) {
             case status.closedBox:
                 setModalStatus(status.openedBox);
