@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Figure({ image, name, description, front, collected }) {
+export default function Figure({ image, name, description, front, back, collected }) {
   const [selected, setSelected] = useState(false);
   const [flipped, setFlipped] = useState(false);
 
@@ -35,7 +35,7 @@ export default function Figure({ image, name, description, front, collected }) {
 
       {selected && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center frontdrop-blur-sm bg-transparent"
+          className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-transparent"
           onClick={closePopup}
         >
           <div
@@ -55,18 +55,21 @@ export default function Figure({ image, name, description, front, collected }) {
               onClick={() => setFlipped(!flipped)}
             >
               <div
-                className={`relative w-[220px] h-[280px] transition-transform duration-500 transform-style-preserve-3d ${
+                className={`relative w-[220px] h-[308px] transition-transform duration-500 transform-style-preserve-3d ${
                   flipped ? 'rotate-y-180' : ''
                 }`}
               >
-                <div className="absolute w-full h-full frontface-hidden bg-[#794F41] rounded-lg p-4 shadow-md flex flex-col justify-center items-center text-center">
-                  <h3 className="text-lg font-bold mb-2 gaegu-regular text-[#FCC8BA]">
-                    {name}
-                  </h3>
-                  <p className="text-sm text-[#F2F0E5]">{description}</p>
+                {/* FRONT (shows back image) */}
+                <div className="absolute w-full h-full backface-hidden bg-white rounded-lg flex items-center justify-center shadow-md overflow-hidden">
+                  <img
+                    src={back}
+                    alt={`${name} back`}
+                    className="h-full w-full object-contain rounded"
+                  />
                 </div>
 
-                <div className="absolute w-full h-full frontface-hidden rotate-y-180 bg-white rounded-lg flex items-center justify-center shadow-md overflow-hidden">
+                {/* BACK (shows front image) */}
+                <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-lg flex items-center justify-center shadow-md overflow-hidden">
                   <img
                     src={front}
                     alt={`${name} real`}
