@@ -6,9 +6,9 @@ export default function EventBlock({ card }) {
             <img 
                 src={card.picture} 
                 alt="Card Visual" 
-                className="object-cover row-start-0 row-span-1" 
+                className="object-cover row-start-0 row-span-1 w-full h-[120px]" 
             />
-            <h1 className="text-xl/5 mt-4 mb-2 lexend-deca-regular">{card.name}</h1>
+            <h1 className="text-xl/5 mt-4 mb-5 lexend-deca-regular">{card.name}</h1>
             <p className="text-base/5 tracking-tight gaegu-regular">{card.description}</p>
         </div>
     );
