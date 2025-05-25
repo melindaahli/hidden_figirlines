@@ -21,6 +21,9 @@ function Home(props) {
                 <div className="w-64">
                     <WideButton text="STORE" clickFunction={() => props.setCurrentPage('store')} />
                 </div>
+                <div className="w-64">
+                    <WideButton text="SHELF" clickFunction={() => props.setCurrentPage('shelf')} />
+                </div>
             </div>
         </div>
     );
